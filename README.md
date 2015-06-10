@@ -1,7 +1,7 @@
 SpreeSummernote
 ===============
 
-Introduction goes here.
+This extention for Spree will add Summernote http://summernote.org/ the rich text editor to Spree Commerce backend. It's rough around the edges and not configurable at the moment but it suits my purposes. I'm using it in a couple of extensions and need to be able to share this between them. I'll probably extend it quite a bit as I'm already seeing a need to (like what's in the toolbar).
 
 Installation
 ------------
@@ -29,11 +29,4 @@ bundle
 bundle exec rake
 ```
 
-When testing your applications integration with this extension you may use it's factories.
-Simply add this require statement to your spec_helper:
-
-```ruby
-require 'spree_summernote/factories'
-```
-
-Copyright (c) 2015 [name of extension creator], released under the New BSD License
+Copyright (c) 2015 Dominic Stockdlae, released under the MIT License
