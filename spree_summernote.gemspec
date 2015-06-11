@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_summernote'
-  s.version     = '3.0.0'
+  s.version     = '3.0.1'
   s.summary     = 'Adds Summernote RTE to Spree 3.0.0 backend'
   s.description = 'Adds Summernote RTE to Spree 3.0.0 backend'
   s.required_ruby_version = '>= 2.0.0'
