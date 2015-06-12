@@ -62,4 +62,4 @@ bundle
 bundle exec rake
 ```
 
-Copyright (c) 2015 Dominic Stockdlae, released under the MIT License
+Copyright (c) 2015 Dominic Stockdale, released under the MIT License
