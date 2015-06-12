@@ -1,8 +1,13 @@
 # encoding: UTF-8
+lib = File.expand_path('../lib/', __FILE__)
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
+
+require 'spree_summernote/version'
+
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_summernote'
-  s.version     = '3.0.1'
+  s.version     = Summernote.version
   s.summary     = 'Adds Summernote RTE to Spree 3.0.0 backend'
   s.description = 'Adds Summernote RTE to Spree 3.0.0 backend'
   s.required_ruby_version = '>= 2.0.0'
@@ -15,6 +20,8 @@ Gem::Specification.new do |s|
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
+
+  s.has_rdoc = false
 
   s.add_dependency 'spree_core', '~> 3.0.0'
   s.add_dependency 'spree_backend', '~> 3.0.0'
