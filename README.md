@@ -10,6 +10,8 @@ Add spree_summernote to your Gemfile:
 
 ```ruby
 gem 'spree_summernote'
+# or for even more fun try
+gem 'spree_summernote', github: 'dstockdale/spree_summernote', branch: '3-0-stable'
 ```
 
 Bundle your dependencies and run the installation generator:
@@ -17,6 +19,37 @@ Bundle your dependencies and run the installation generator:
 ```shell
 bundle
 bundle exec rails g spree_summernote:install
+```
+
+Usage
+------------
+
+At the moment this is just including the assets. It'll put Summernote into your product descriptions and taxon descriptions by default. If you want to do something else a bit of jQuery is all you need. You should check out http://summernote.org/#/deep-dive for examples of what you can do, like air mode and slimming down the toolbar.
+
+```javascript
+// This will respect the locale if you're using Spreei18n
+// Spree.SpreeSummernote.translatedLocale() will return the locale for Summernote
+(function() {
+  $(document).ready(function() {
+
+    if (typeof(Spree.SpreeSummernote) !== "undefined") {
+
+      $(".your-selectors-here").summernote({
+        lang: Spree.SpreeSummernote.translatedLocale(),
+        toolbar: [           
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+          ['font', ['strikethrough', 'superscript', 'subscript']],
+          ['fontsize', ['fontsize']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['insert', ['link', 'picture']]
+        ]
+      });
+
+    }
+  });
+  
+})();
 ```
 
 Testing
