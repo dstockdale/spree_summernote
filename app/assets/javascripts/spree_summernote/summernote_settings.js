@@ -54,7 +54,17 @@
     ].join(',');
 
     $(selectors).summernote({
-      lang: SpreeSummernote.translatedLocale()
+      lang: SpreeSummernote.translatedLocale(),
+      tabsize: 2,
+      minHeight: 300,
+      toolbar: [
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['height', ['height']],
+        ['table', ['table']],
+        ['insert', ['video','link']]
+      ]
     });
     
   });
