@@ -63,7 +63,8 @@
         ['para', ['ul', 'ol', 'paragraph']],
         ['height', ['height']],
         ['table', ['table']],
-        ['insert', ['video','link']]
+        ['insert', ['video','link']],
+        ['misc', ['fullscreen', 'codeview', 'help']]
       ]
     });
     
